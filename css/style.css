@@ -1,0 +1,352 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-body:'Roboto', sans-serif;
+    --para-color:#4e4e4e;
+    --high-blue:#0078ff;
+    --low-blue:#cde1f8;
+    --bs-secondary-bg: #e9ecef;
+    --font-color1e:#1e1e1e;
+}
+body{
+    background-color: var(--bs-secondary-bg);
+}
+html{
+    font-size: 16px;
+    
+}
+.high_color{
+    color: var(--high-blue);
+}
+
+.para_color{
+    color: var(--para-color);
+}
+.color_1e{
+    color: var(--font-color1e);
+}
+.aboutbg1{
+    background-color: var(--low-blue);
+    height: 25px;
+}
+.aboutbg2{
+    background-color: var(--high-blue);
+   
+}
+.mastercont::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: var(--high-blue);
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* start nav bar */
+nav{
+    background: rgba(0, 0, 0, 0.9);
+    padding: 12px 0;
+}
+nav ul li a{
+    position: relative;
+    color: white;  
+}
+nav ul li  .active:after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    bottom:0% ;
+    left: 10%;
+    width: 60%;
+}
+.navbar-nav a{
+    transition: all .2s linear;
+    position: relative;
+}
+.navbar-nav a:hover{
+    color: var(--high-blue);
+}
+.navbar-nav a:hover::before{
+    left: 10%;
+    transition: all .25s linear;
+
+}
+.navbar-nav a::before{
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    bottom:0% ;
+    left: -130%;
+    width: 60%;
+}
+@media screen and (max-width:992px){
+    .navbar-nav a::before{
+    visibility: hidden;  
+    } 
+    .navbar-nav a:hover{
+        color: var(--high-blue);
+    }
+   
+}
+
+
+/* end nav bar */
+/* start home page */
+
+.home{
+    background-image: url(../pic/hero-bg.jpg);
+    background-size: cover ;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+@media (max-width: 1024px){
+    .home {
+      background-attachment: scroll;
+    }
+    }
+.home .full{
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+}
+.home p::after{
+    content: "";
+    animation: typing 10s  infinite ;
+}
+@keyframes typing {
+    0%{content: "D |";}
+    3%{content: "De |";}
+    6%{content: "Des |";}
+    9%{content: "Desi |";}
+    12%{content: "Desig |";}
+    15%{content: "Design |";}
+    18%{content: "Designe |";}
+    21%{content: "Designer |";}
+    24%{content: "Designer ";}
+    27%{content: "Designer |";}
+    30%{content: "Designer ";}
+    33%{content: "Designe |";}
+    36%{content: "Design |";}
+    39%{content: "Desig |";}
+    042%{content: "Desi |";}
+    45%{content: "Des |";}
+    48%{content: "De |";}
+    51%{content: "De ";}
+    54%{content: "De |";}
+    57%{content: "Dev |";}
+    60%{content: "Deve |";}
+    63%{content: "Devel |";}
+    66%{content: "Develo |";}
+    69%{content: "Develop |";}
+    72%{content: "Develope |";}
+    75%{content: "Developer |";}
+    78%{content: "Develope |";}
+    81%{content: "Develo |";}
+    84%{content: "Devel |";}
+    87%{content: "Deve |";}
+    90%{content: "Dev |";}
+    93%{content: "De |";}
+    96%{content: "D |";}
+    98%{content: " |";}
+    100%{content: " |";}
+
+
+}
+.home h1{
+    font-size:3rem;
+    font-weight: bold;
+    line-height: 1.6;
+}
+.home p{
+    font-size: 2rem;
+}
+
+@media screen and (max-width:992px) {
+    .home h1{
+        font-size:2rem;
+    }
+    .home p{
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* end home page */
+/* start about page */
+
+
+.para_leed{
+    font-size: 1.25rem;
+    font-weight: 300;  
+    line-height: 2.5;
+}
+.about__line{
+    position: relative;
+}
+.about__line::after{
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: var(--high-blue);
+    content: "";
+    left: 2%;
+    bottom: 30%;
+}
+
+.padding_top{
+    padding-top: 40px
+}
+/* end about page */
+/* start services card */
+.services__card{
+    width: 100px;
+    height: 100px;
+    color: black;
+    border: solid 5px var(--high-blue);
+    border-radius: 50%;
+    margin: auto;
+    transition: all .25s linear;
+}
+.services__cardHover:hover .services__card{
+    background-color: var(--high-blue);
+    border-color: var(--low-blue);
+    color: white;
+}
+/* end services page */
+/* start counter page */
+.counter{
+    background-image: url(../pic/counters-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+.counter::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:#0078ff;
+    z-index: 1;
+    opacity: .5;
+    top: 0;
+    left: 0;
+}
+.cunter__border{
+    border: 5px solid var(--low-blue);
+    border-radius: 50%;
+}
+/* end counter page */
+/* start portfolio page */
+.port__hoverpic img{
+    transition: all .25s linear;
+}
+.port__hover:hover img{
+    transform: scale(1.3);
+}
+/* end portfolio page */
+/* start coursel page */
+.courssol__img{
+    background-image: url(../pic/counters-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+@media (max-width: 1024px){
+    .courssol__img{
+      background-attachment: scroll;
+    }
+    }
+.courssol__img::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:#0078ff;
+    z-index: 1;
+    opacity: .7;
+    top: 0;
+    left: 0;
+}
+.carousel-indicators [data-bs-target]{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+.curpic{
+    width: 200px;
+    height: 200px;
+}
+/* end coursel page */
+/* start blog page */
+.blog__hover{
+    transition: all .25s linear;
+}
+.blog__hover:hover{
+    color: var(--high-blue);
+}
+.avatar{
+width: 32px;
+height: 32px;
+margin-right: 4px;}
+/* end blog page */
+/* start contact page */
+.contact__Page{
+    background-image: url(../pic/overlay-bg.jpg);
+    background-size: cover;
+    width: 100%;
+    
+    background-attachment: fixed;
+    position: relative;
+    
+}
+.contact__Page::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:#0078ff;
+    z-index: 1;
+    opacity: .5;
+    top: 0;
+    left: 0;
+}
+.contact__card{
+    width: 50px;
+    height:50px;
+    color: rgb(44, 17, 196);
+    border: solid 5px var(--high-blue);
+    border-radius: 50%;
+    margin: 10px;
+    transition: all .25s linear;
+}
+.contact__card:hover {
+    background-color: var(--high-blue);
+    border-color: var(--low-blue);
+    color: white;
+}
+
+    .contact__Page textarea {
+        min-height: 150px;
+        max-height: 300px;
+      }
+
+/* end contact page */
+/* start footer page */
+.footer{
+    text-align: center;
+color: #fff;
+padding: 25px 0;
+background: #0062d3;
+}
+/* end footer page */
